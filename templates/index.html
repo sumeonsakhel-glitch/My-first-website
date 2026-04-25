@@ -1,47 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>About Me | Lalrinpuii</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background: #0f172a;
-            color: white;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: #fff;
+            width: 350px;
+            padding: 40px;
             text-align: center;
-            padding: 50px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: rgba(255,255,255,0.05);
-            padding: 30px;
             border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
-        h1 { color: #38bdf8; }
-        p { line-height: 1.8; color: #94a3b8; }
-        .back-btn {
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #007bff;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
             display: inline-block;
-            margin-top: 20px;
-            color: #38bdf8;
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
             text-decoration: none;
-            border: 1px solid #38bdf8;
-            padding: 10px 20px;
-            border-radius: 10px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>About Me</h1>
-        <p>
-            Hi! I am <strong>Lalrinpuii</strong>. I am a student and an aspiring Web Developer. 
-            I created this website using <strong>Python, Flask, and HTML/CSS</strong>. 
-        </p>
-        <p>
-            I love learning new technologies and building things for the internet. 
-            Thank you for visiting my first personal website!
-        </p>
-        <a href="/" class="back-btn">Back to Home</a>
+
+    <div class="card">
+        <!-- Ensure your image in the static folder is named 'Lalrinpuii.jpg' -->
+        <img src="{{ url_for('static', filename='Lalrinpuii.jpg') }}" alt="Profile Image" class="profile-img">
+        <h1>Lalrinpuii</h1>
+        <p>Full Stack Web Developer in training. Passionate about building modern websites using Python and Flask.</p>
+        <a href="#" class="cta-button">Contact Me</a>
     </div>
+
 </body>
 </html>
