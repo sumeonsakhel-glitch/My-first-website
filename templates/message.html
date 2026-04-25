@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Me</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; text-align: center; padding: 50px; }
+        .container { max-width: 500px; margin: auto; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        h1 { color: #38bdf8; }
+        input, textarea { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: none; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #38bdf8; color: #0f172a; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        .msg-box { text-align: left; background: rgba(255,255,255,0.1); padding: 15px; margin-top: 15px; border-radius: 10px; border-left: 4px solid #38bdf8; }
+        .sender { font-weight: bold; color: #38bdf8; display: block; margin-bottom: 5px; }
+        .back-link { color: #888; text-decoration: none; display: block; margin-top: 20px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Message Me</h1>
+        <form method="POST">
+            <input type="text" name="name" placeholder="I hming..." required>
+            <textarea name="message" placeholder="I message..." rows="4" required></textarea>
+            <button type="submit">Thawn rawh</button>
+        </form>
+
+        <div style="margin-top: 30px;">
+            <h3 style="border-bottom: 1px solid #333; padding-bottom: 10px;">Messages:</h3>
+            {% for m in messages %}
+            <div class="msg-box">
+                <span class="sender">{{ m.name }}:</span>
+                {{ m.message }}
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/" class="back-link">← Let lehna</a>
+    </div>
+</body>
+</html>
