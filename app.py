@@ -7,7 +7,8 @@ messages = []
 
 @app.route('/')
 def home():
-    return render_template('Index.html')
+    # 'Index.html' ni lovin 'index.html' (small letter) a ni tur a ni
+    return render_template('index.html')
 
 @app.route('/about')
 def about():
