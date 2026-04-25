@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home - Ka Website</title>
+    <title>About Me | Lalrinpuii</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #121212; color: white; text-align: center; padding: 50px; }
-        .container { max-width: 600px; margin: auto; background: #1e1e1e; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        h1 { color: #1DB954; }
-        p { color: #aaa; font-size: 1.1em; }
-        .btn { display: inline-block; background: #1DB954; color: white; text-decoration: none; padding: 12px 25px; border-radius: 25px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
-        .btn:hover { background: #1ed760; transform: scale(1.05); }
-        img { border-radius: 50%; border: 3px solid #1DB954; margin-bottom: 20px; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 20px;
+        }
+        h1 { color: #38bdf8; }
+        p { line-height: 1.8; color: #94a3b8; }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            color: #38bdf8;
+            text-decoration: none;
+            border: 1px solid #38bdf8;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- I thlalak kha static folder-a a awm chuan i hming hi siamrem rawh -->
-        <img src="{{ url_for('static', filename='Lalrinpuii.jpg') }}" width="150" alt="Profile">
-        <h1>Chibai le!</h1>
-        <p>He website hi Python (Flask) hmanga ka siam hmasak ber a ni.</p>
-        <!-- About page-a luhna link -->
-        <a href="/about" class="btn">En rawh: Ka Music Playlist</a>
+        <h1>About Me</h1>
+        <p>
+            Hi! I am <strong>Lalrinpuii</strong>. I am a student and an aspiring Web Developer. 
+            I created this website using <strong>Python, Flask, and HTML/CSS</strong>. 
+        </p>
+        <p>
+            I love learning new technologies and building things for the internet. 
+            Thank you for visiting my first personal website!
+        </p>
+        <a href="/" class="back-btn">Back to Home</a>
     </div>
 </body>
 </html>
